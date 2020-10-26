@@ -1,12 +1,13 @@
 top {
 	position: fixed;
 	top: 0;
-	left: 0;
+    left: 0;
+    height: 100px;
     display: flex;
     background: light-grey;
 }
 .bob {
-	width: 100px;
+	width: 75px;
     margin-left: 20px;
 }
 main {
