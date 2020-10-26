@@ -14,7 +14,7 @@ img.bob {
     margin-left: 20px;
 }
 
-top.span {
+top > span {
     font-size: 24px;
     font-weight: bold;
 }
