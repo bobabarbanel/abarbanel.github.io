@@ -2,11 +2,12 @@ top {
 	position: fixed;
 	top: 0;
 	left: 0;
-	display: flex;
+    display: flex;
+    background: light-grey;
 }
 bob {
 	width: 100px;
-	margin-left: 20px;
+    margin-left: 20px;
 }
 main {
 	margin: 20px;
