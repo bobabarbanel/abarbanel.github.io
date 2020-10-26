@@ -6,12 +6,17 @@ top {
     width: 100%;
     display: flex;
     align-items: center;
-    background-color: rgb(220, 219, 219);
+    background-color: rgb(255, 255, 204);
 }
 
 img.bob {
 	width: 75px;
     margin-left: 20px;
+}
+
+top.span {
+    font-size: 24px;
+    font-weight: bold;
 }
 
 main {
