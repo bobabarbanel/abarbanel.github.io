@@ -6,7 +6,7 @@ top {
     width: 100%;
     display: flex;
     align-items: center;
-    background-color: lightgray;
+    background-color: rgb(220, 219, 219);
 }
 
 img.bob {
