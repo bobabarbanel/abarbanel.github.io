@@ -4,12 +4,14 @@ top {
     left: 0;
     height: 100px;
     display: flex;
-    background: light-grey;
+    align-items: center;
+    background-color: lightgray;
 }
-.bob {
+img.bob {
 	width: 75px;
     margin-left: 20px;
 }
+
 main {
 	margin: 20px;
 }
