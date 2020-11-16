@@ -1,0 +1,316 @@
+#images {
+	width: 100%;
+	margin-top: 5px;
+	position: relative;
+}
+#images > * {
+	position: absolute;
+}
+.site_title {
+	display: none;
+	text-align: center;
+	font-size: 24px;
+	color: pink;
+}
+
+.banner {
+	text-align: center;
+	text-shadow: 2px 2px grey;
+	top: 100px;
+	left: 25%;
+	font-size: 72px;
+	font-family: "Crimson Text", serif;
+	/* width: 450px; */
+}
+.explore_bkgnd {
+	background-color: blue;
+}
+.main_bkgnd {
+	background-color: deepskyblue;
+}
+.whitefont {
+	color: white;
+}
+#explore_image {
+	width: 300px;
+	max-width: 95%;
+}
+#links {
+	border: 2px solid white;
+}
+#links td { /* name of restaurant */
+	width: 400px;
+	border-bottom: 1px solid white;
+}
+#links th { /* location of restaurant */
+	width: 300px;
+	text-align: right;
+	border-bottom: 1px solid white;
+}
+#links tr:last-child > * { /* location of restaurant */
+	border-bottom: none;
+}
+
+#links a:link {
+	color: rgb(231, 23, 151);
+	background-color: transparent;
+	
+}
+#links a:visited {
+	color: rgb(226, 114, 193);
+}
+.title {
+	font-size: 72px;
+	text-align: center;
+	color: pink;
+}
+
+
+.explore {
+	text-align: center;
+	text-shadow: 2px 2px grey;
+	top: 575px;
+	right: 5%;
+	font-size: 50px;
+	font-family: "Crimson Text", serif;
+	width: 450px;
+}
+.explore a {
+	color: gold;
+}
+nav {
+	height: 40px;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: lightgray;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+content {
+	position: relative;
+	top: 45px;
+	display: flex;
+	flex-direction: column;
+	font-size: 24px;
+}
+
+#explore_display {
+	margin-top: 30px;
+	display: flex;
+	align-items: center;
+	flex-flow: row wrap;
+	justify-content: space-around;
+}
+
+.navigation {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-end;
+
+	list-style: none;
+	margin: 0;
+	background: deepskyblue;
+}
+
+.navigation a {
+	text-decoration: none;
+	display: block;
+	padding: 1em;
+	color: white;
+}
+
+
+.navigation a:hover {
+	background: #1565c0;
+}
+.bold a:hover {
+	background: transparent;
+}
+.about {
+	margin-top: 20px;
+	font-size: 24px;
+	color: white;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+.nav {
+	background: deepskyblue;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.nav > h2 {
+	margin-left: 80px;
+}
+.bold {
+	font-weight: bold;
+	background: #6a92be;
+}
+.orderform {
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	width: 300px;
+	justify-content: flex-end;
+}
+.orderform * {
+	font-size: 24px;
+	margin-top: 10px;
+	width: 350px;
+}
+.orderform label {
+	color: white;
+	width: 250px;
+}
+.orderform button {
+	width: 150px;
+	align-self: center;
+}
+
+.show_desktop {
+	display: inline;
+}
+.show_mobile {
+	display: none;
+}
+.show_laptop {
+	display: none;
+}
+gallery {
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+div.gallery {
+	margin: 20px 5px auto;
+	border: 1px solid #ccc;
+	width: 200px;
+}
+
+div.gallery:hover {
+	border: 1px solid #777;
+}
+
+div.gallery img {
+	width: 200px;
+	height: auto;
+}
+
+div.desc {
+	padding: 15px;
+	text-align: center;
+	color: white;
+}
+
+@media screen and (max-width: 1200px) {
+
+	.navigation {
+		justify-content: space-around;
+	}
+
+	.show_desktop {
+		display: none;
+	}
+	.show_mobile {
+		display: none;
+	}
+	.show_laptop {
+		display: inline;
+	}
+	.explore {
+		top: 400px;
+	}
+	.title {
+		font-size: 48px;
+	}
+	#explore_display {
+		flex-direction: column;
+		/* justify-content: space-between; */
+	}
+	#explore_image {
+		margin-top: 30px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	#links td { /* name of restaurant */
+		width: 200px;
+		font-size: 20px;
+	}
+	#links th { /* location of restaurant */
+		width: 100px;
+		text-align: right;
+		font-size: 20px;
+	}
+	.title {
+		font-size: 36px;
+	}
+	#explore_display {
+		flex-direction: column;
+		/* justify-content: space-between; */
+	}
+	/* #explore_image {
+		margin-top: 30px;
+	} */
+	.site_title {
+		display: block;
+	}
+	.navigation {
+		flex-direction: column;
+		justify-content: center;
+		padding: 0;
+		margin: auto;
+		font-size: 18px;
+		width: 100%;
+	}
+	.navigation a {
+		text-align: center;
+		padding: 10px;
+		border-top: 1px solid rgba(255, 255, 255, 0.3);
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	}
+	.navigation li:last-of-type a {
+		border-bottom: none;
+	}
+	.nav > h2 {
+		display: none;
+	}
+
+	.show_desktop {
+		display: none;
+	}
+	.show_mobile {
+		display: inline;
+	}
+	.show_laptop {
+		display: none;
+	}
+	.banner {
+		text-align: center;
+		text-shadow: 2px 2px grey;
+		position: absolute;
+		top: 25px;
+		left: -10px;
+		font-size: 48px;
+		font-family: "Crimson Text", serif;
+		width: 100%;
+	}
+	.explore {
+		font-size: 30px;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+
+	.orderform * {
+		font-size: 20px;
+		margin-top: 8px;
+		width: 95%;
+	}
+
+}
