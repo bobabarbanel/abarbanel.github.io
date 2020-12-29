@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
     <link rel="stylesheet" href="./styles.css" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.min.js"
+        integrity="sha512-b/htz6gIyFi3dwSoZ0Uv3cuv3Ony7EeKkacgrcVg8CMzu90n777qveu0PBcbZUA7TzyENGtU+qZRuFAkfqgyoQ=="
+        crossorigin="anonymous"></script>
     <title>Robert Abarbanel</title>
 </head>
 
@@ -14,10 +17,42 @@
         <img class="bob" src="./bob.jpg" alt="bob image">
         <span>&nbsp;&nbsp;Robert Abarbanel</span>
     </top>
-    <main>
-        <h1>Web Site In Development</h1>
-    </main>
+    <div id='p5'>
 
+    </div>
+    <script>
+        let canvas;
+        let t = 0;
+        function setup() {
+            var canvas = createCanvas(400, 400);
+            canvas.parent('p5');
+            noStroke();
+            fill(40, 200, 40);
+        }
+
+        function draw() {
+            background(10, 10); // translucent background (creates trails)
+
+            // make a x and y grid of ellipses
+            for (let x = 0; x <= width; x = x + 30) {
+                for (let y = 0; y <= height; y = y + 30) {
+                    // starting point of each circle depends on mouse position
+                    const xAngle = map(mouseX, 0, width, -4 * PI, 4 * PI, true);
+                    const yAngle = map(mouseY, 0, height, -4 * PI, 4 * PI, true);
+                    // and also varies based on the particle's location
+                    const angle = xAngle * (x / width) + yAngle * (y / height);
+
+                    // each particle moves in a circle
+                    const myX = x + 20 * cos(2 * PI * t + angle);
+                    const myY = y + 20 * sin(2 * PI * t + angle);
+
+                    ellipse(myX, myY, 10); // draw particle
+                }
+            }
+
+            t = t + 0.01; // update time
+        }
+    </script>
 </body>
 
 </html>
